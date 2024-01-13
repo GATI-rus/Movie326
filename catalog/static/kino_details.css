@@ -1,0 +1,231 @@
+
+.menu {
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    box-shadow: 0 1px 6px 7px rgb(93 239 203);
+}
+
+.menu a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu a:hover {
+    color: #ff0000;
+}
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 20px;
+    background-color: darkblue;
+    border-radius: 5px;
+}
+h2, h4 {
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background-color: black;
+}
+
+img {
+    width: 450px;
+    height: 650px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: revert;
+    color: #1816bc;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2px;
+}
+p {
+    text-decoration: auto;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2px;
+}
+
+.movie-title {
+    font-size: 18px;
+}
+
+.movie-details {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.movie-details span {
+    font-weight: bold;
+}
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+
+.comment .username {
+    font-weight: bold;
+    color: #333333;
+}
+
+.comment .date {
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 5px;
+}
+
+.comment .body {
+    color: #555555;
+    line-height: 1.5;
+}
+
+.new-comment {
+    background-color: #f3f8ff;
+    border-color: #b3d7ff;
+}
+
+.descriptiomo-nalonvevons {
+  position: relative;
+  margin: 25px auto;
+  padding: 15px;
+  width: 56%;
+  min-height: 10px;
+  font-family: sans-serif;
+  background: rgb(188, 207, 216);
+  border: 2px solid rgb(72, 117, 117);
+}
+
+.descriptiomo-nalonvevons:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  border: 10px solid #fdfcfc;
+  border-bottom: 10px solid rgb(94, 122, 136);
+  border-left: 10px solid rgb(90, 123, 123);
+  z-index: -1;
+}
+
+.descriptiomo-nalonvevons:after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 17px;
+  border: 10px solid hsla(0, 0%, 0%, 0);
+  border-bottom: 10px solid rgb(188, 207, 216);
+  border-left: 10px solid rgb(188, 207, 216);
+  z-index: 1;
+}
+
+
+/* Стили для изображения */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Стили для блока с информацией о фильме */
+div {
+    margin: 20px;
+    padding: 20px;
+    background-color: #b4b1b1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Стили для текстового поля ввода комментария */
+textarea {
+    width: 97%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Стили для кнопки отправки комментария */
+button {
+    background-color: #0099cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Стили для кнопки отправки комментария при наведении */
+button:hover {
+    background-color: #0077b3;
+}
+
+/* Стили для комментариев */
+.comment {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.date {
+    color: #999;
+}
+
+.new-comment {
+    background-color: #e6f7ff;
+}
+
+/* Остальное оформление по вашему вкусу */

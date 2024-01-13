@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block head %}
+    <title>ЛИЧНЫЙ КАБИНЕТ</title>
+    <link rel="stylesheet" href="{% static 'cabinet.css' %}">
+
+{% endblock head %}
+{% block content %}
+    <div class="cabinet">
+        <h2>ЛИЧНЫЙ КАБИНЕТ</h2>
+        {% if user.username %}
+            <h3>Имя: {{ user.username }}</h3>
+            <h3>Почта: {{ user.email }}</h3>
+            <h3>Баланс: {{ user.profiuser.balance }} р.</h3>
+            <h2> ВАША ПОДПИСКА</h2>
+{#            <h3> Уровень: {{ user.profiuser.podpiska.id }}</h3>#}
+            <h3> {{ user.profiuser.podpiska }}</h3>
+        {% else %}
+            <h2>
+                <a href=" {% url 'login' %} ">Зарегистрироваться</a>
+            </h2>
+        {% endif %}
+        <form action="" method="post">
+            {% csrf_token %}
+
+            {% if user.profiuser.podpiska.id == 1 %}
+                <button type="submit" value="free" name="stype" disabled="disabled">Бесплатная</button>
+            {% else %}
+                <button type="submit" value="free" name="stype">Бесплатная</button>
+            {% endif %}
+
+            {% if user.profiuser.podpiska.id == 2 %}
+                <button type="submit" value="based" name="stype" disabled="disabled">Базовая</button>
+            {% else %}
+                <button type="submit" value="based" name="stype">Базовая</button>
+            {% endif %}
+
+            {% if user.profiuser.podpiska.id == 3 %}
+                <button type="submit" value="super" name="stype" disabled="disabled">Премиум</button>
+            {% else %}
+                <button type="submit" value="super" name="stype">Премиум</button>
+            {% endif %}
+        </form>
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="balanceplus">Пополнить баланс</label>
+            <input type="number" id="balanceplus" name="summa">
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+{% endblock %}

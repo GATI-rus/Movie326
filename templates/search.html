@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}
+        <title>Поиск фильмов</title>
+        <link rel="stylesheet" href="{% static 'search.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <div class="search-form">
+        <form action="{% url 'search' %}" method="GET">
+            <label>
+                <input type="text" name="query" placeholder="Введите запрос">
+            </label>
+            <input type="submit" value="Найти">
+        </form>
+    </div>
+    {% if films %}
+        <div class="search-results">
+            <h2>Результаты поиска:</h2>
+            <ul>
+                {% for film in films %}
+                    <li>
+                        <a href="{% url 'info' film.id %}">
+                            {{ film.title }}
+                            <img src="{{ film.image }}" alt="{{ film.title }}">
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}
+</body>
+</html>

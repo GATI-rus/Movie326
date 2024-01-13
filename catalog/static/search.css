@@ -1,0 +1,99 @@
+
+.menu {
+    margin: 10px 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    box-shadow: 0 1px 6px 7px rgb(93 239 203);
+}
+
+.menu a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu a:hover {
+    color: #ff0000;
+}
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+/* Стили для формы */
+.search-form {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Стили для текстового поля ввода */
+.search-form input[type="text"] {
+    width: 300px;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Стили для кнопки отправки */
+.search-form input[type="submit"] {
+    background-color: #0099cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Стили для результатов поиска */
+.search-results {
+    margin-top: 50px;
+}
+
+.search-results h2 {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-results li {
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.search-results a {
+    text-decoration: none;
+    color: #09f;
+}
+
+.search-results img {
+    display: block;
+    width: 200px;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+    background-color: #fffaf0cc;
+    box-shadow: 0px 0px 19px 4px #4fffb8;
+}

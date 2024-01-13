@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/kinoplenka-82.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.menu {
+    margin: 10px 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    box-shadow: 0 1px 6px 7px rgb(93 239 203);
+}
+
+.menu a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu a:hover {
+    color: #ff0000;
+}
+/* Основные стили */
+
+.cabinet {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 80px 30%;
+    background-color: #fffaf012;
+    box-shadow: 17px 18px 8px #fff0;
+}
+
+h2 {
+  color: red;
+    margin-top: 17px;
+}
+
+h3 {
+  color: white;
+    margin-top: 2px;
+}
+
+/* Форма с кнопками подписок */
+form {
+  margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #51c6fa;
+}
+
+button:active {
+    background-color: #003d80;
+}
+
+button:disabled {
+  background-color: chartreuse;
+  cursor: not-allowed;
+}
+
+/* Форма для пополнения баланса */
+#balanceplus {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+/* Ссылка для регистрации */
+h2 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+h2 a:hover {
+  text-decoration: underline;
+}

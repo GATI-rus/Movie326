@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block head %}
+    <title>Про режиссёра</title>
+    <link rel="stylesheet" href="{% static 'kino_details.css' %}">
+{% endblock head %}
+
+{% block content %}
+    <ul>
+        <li>
+            <img src="{{ director.image }}" alt="{{ director.name }}">
+            <div>
+                <h2>Режисёр: {{ director.name }}</h2>
+                <h4>Дата рождения: {{ director.data }}</h4>
+                <h4>Количество фильмов: {{ director.filmcount }}</h4>
+                <h4>Лучшие фильмы: {{ director.best|linebreaks }}</h4>
+                <h4>Ссылка: <a href=" {{ director.info }}">{{ director.info }}</a></h4>
+
+
+{#                <h4>Комментарии:</h4>#}
+{#                {% for comment in kino.get_comments %}#}
+{#                    <p>{{ comment.content }}</p>#}
+{#                    <small>Автор: {{ comment.user }}</small>#}
+{#                    <small>Дата: {{ comment.created_at }}</small>#}
+{#                    <hr>#}
+{#                {% empty %}#}
+{#                    <p>Комментариев пока нет.</p>#}
+{#                {% endfor %}#}
+{##}
+{#                <!-- Форма для добавления нового комментария -->#}
+{#                <h4>Оставьте комментарий:</h4>#}
+{#                <form action="{% url '#' kino.id %}" method="POST">#}
+{#                    {% csrf_token %}#}
+{#                    <label>#}
+{#                        <textarea name="content" required></textarea>#}
+{#                    </label>#}
+{#                    <button type="submit">Отправить</button>#}
+{#                </form>#}
+            </div>
+        </li>
+    </ul>
+{% endblock content %}

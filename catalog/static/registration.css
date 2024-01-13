@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/film-50.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu {
+    margin: 10px 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    box-shadow: 0 1px 6px 7px rgb(93 239 203);
+}
+
+.menu a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu a:hover {
+    color: #ff0000;
+}
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    max-width: 449px;
+    margin: 22px auto;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #fffaf0cc;
+    box-shadow: 10px 8px 7px #ffffff30;
+    flex-direction: column;
+    align-items: end;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"] {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

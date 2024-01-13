@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block head %}
+    <title>Про фильм</title>
+    <link rel="stylesheet" href="{% static 'kino_details.css' %}">
+{% endblock head %}
+{% block content %}
+    <ul>
+        <li>
+            <img src="{{ kino.image }}" alt="{{ kino.title }}">
+            <div>
+                <h2>Фильм: {{ kino.title }}</h2>
+                <h4>Режисёр: {{ kino.director }}</h4>
+                <h4>Актёры: {{ kino.displayAct }}</h4>
+                <h4>Описание: {{ kino.opisanie }}</h4>
+                <h4>Подписка: {{ kino.podpiska.get_level_display }}</h4>
+                {{ user }}
+                {{ user.profiuser.podpiska.id }}
+                {{ kino.podpiska.id }}
+
+                {% if user.profiuser.podpiska.id >= kino.podpiska.id %}
+                    <iframe width="560" height="315" src="{{ kino.trailer_url }}"
+                            frameborder="0" allow="accelerometer; autoplay;
+                         clipboard-write; encrypted-media; gyroscope;
+                          picture-in-picture; web-share" allowfullscreen></iframe>
+                    <a href="{{ kino.poster }}"><h4>Постер: {{ kino.poster }}</h4></a>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form }}
+                        <input type="submit" value="Отправить">
+                    </form>
+
+                    {% for one in comments %}
+                        <div class="comment">
+                            <span class="username">{{ one.user.username }}</span>
+                            <span class="date">{{ one.timedata }}</span>
+                            <div class="descriptiomo-nalonvevons">{{ one.body }}</div>
+                        </div>
+                    {% endfor %}
+
+                    {% if new_comments %}
+                        <h3>Новые комментарии:</h3>
+                        {% for comment in new_comments %}
+                            <div class="comment new-comment">
+                                <span class="username">{{ comment.user.username }}</span>
+                                <span class="date">{{ comment.timedata }}</span>
+                                <p class="body">{{ comment.body }}</p>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                {% else %}
+                    <h3>Купите подписку</h3>
+                {% endif %}
+
+            </div>
+        </li>
+    </ul>
+{% endblock content %}
+
+
+

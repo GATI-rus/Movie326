@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block head %}
+    <title>LOGOUT</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock head %}
+
+{% block content %}
+    <h4>
+        <a href="{% url 'login' %}">Войти на сайт</a>
+    </h4>
+
+{% endblock %}
